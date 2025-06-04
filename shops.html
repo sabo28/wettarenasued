@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alle Shops – Wettarena Süd GmbH</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Meta -->
+  <meta name="description" content="Alle Wettarena Süd Standorte auf einen Blick" />
+</head>
+<body class="font-sans text-gray-800">
+  <!-- ========== Navigation ========== -->
+  <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html#hero" class="text-2xl font-extrabold tracking-tight">Wettarena Süd</a>
+      <ul class="hidden md:flex space-x-8 text-sm font-semibold">
+        <li><a href="index.html#features" class="hover:text-red-600">Features</a></li>
+        <li><a href="index.html#shops" class="hover:text-red-600">Shops</a></li>
+        <li><a href="index.html#about" class="hover:text-red-600">Über uns</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-600">Kontakt</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Menü öffnen">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-white/90 backdrop-blur-sm">
+      <ul class="flex flex-col items-center space-y-6 py-6 text-base font-semibold">
+        <li><a href="index.html#features" class="hover:text-red-600" onclick="toggleMenu()">Features</a></li>
+        <li><a href="#shops-list" class="hover:text-red-600" onclick="toggleMenu()">Shops</a></li>
+        <li><a href="index.html#about" class="hover:text-red-600" onclick="toggleMenu()">Über uns</a></li>
+        <li><a href="index.html#contact" class="hover:text-red-600" onclick="toggleMenu()">Kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========== Hero ========== -->
+  <section class="h-72 flex items-center justify-center bg-cover bg-center relative" style="background-image:url('images/shops-hero.jpg');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 text-center text-white p-8">
+      <h1 class="text-3xl md:text-5xl font-black drop-shadow-lg">Alle Standorte</h1>
+    </div>
+  </section>
+
+  <!-- ========== Shops List ========== -->
+  <section id="shops-list" class="py-24">
+    <div class="container mx-auto text-center mb-16 px-6">
+      <h2 class="text-4xl font-extrabold mb-4">Unsere Shops in Süddeutschland</h2>
+      <p class="max-w-2xl mx-auto">Finden Sie Ihre nächste Wettarena Filiale.</p>
+    </div>
+    <div class="container mx-auto grid gap-10 md:grid-cols-3 px-6">
+      <!-- Shop Cards -->
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/shop1.jpg" alt="München Leopoldstraße" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">München – Leopoldstraße</h3>
+          <p class="text-sm">Leopoldstraße 123<br>80804 München</p>
+        </div>
+      </div>
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/shop2.jpg" alt="Nürnberg Innenstadt" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Nürnberg – Innenstadt</h3>
+          <p class="text-sm">Königstraße 45<br>90402 Nürnberg</p>
+        </div>
+      </div>
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/shop3.jpg" alt="Stuttgart Königstraße" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Stuttgart – Königstraße</h3>
+          <p class="text-sm">Königstraße 26<br>70173 Stuttgart</p>
+        </div>
+      </div>
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/shop4.jpg" alt="Augsburg Bahnhofstraße" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Augsburg – Bahnhofstraße</h3>
+          <p class="text-sm">Bahnhofstraße 9<br>86150 Augsburg</p>
+        </div>
+      </div>
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/shop5.jpg" alt="Regensburg Altstadt" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Regensburg – Altstadt</h3>
+          <p class="text-sm">Ludwigstraße 6<br>93047 Regensburg</p>
+        </div>
+      </div>
+      <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+        <img src="images/shop6.jpg" alt="Ulm Hirschstraße" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-2">Ulm – Hirschstraße</h3>
+          <p class="text-sm">Hirschstraße 14<br>89073 Ulm</p>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto text-center mt-12 px-6">
+      <a href="index.html#shops" class="inline-block px-10 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold text-white transition">Zurück zur Hauptseite</a>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="py-8 bg-gray-900 text-gray-400 text-center text-sm">
+    <p>© 2025 Wettarena Süd GmbH – Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <!-- = = = Scripts = = = -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
+    menuBtn.addEventListener('click', toggleMenu);
+  </script>
+</body>
+</html>
