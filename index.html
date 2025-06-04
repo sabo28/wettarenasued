@@ -4,178 +4,155 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wettarena Süd GmbH</title>
-  <!-- Tailwind CSS CDN  -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Meta  -->
-  <meta name="description" content="Wettarena Süd – Sportwetten neu erleben" />
+  <meta name="description" content="Wettarena Süd – Sportwetten neu erleben" />
 </head>
 <body class="font-sans text-gray-800">
-  <!-- ========== Navigation ========== -->
+  <!-- ========== Navigation ========== -->
   <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur z-50 shadow-sm">
     <nav class="container mx-auto flex items-center justify-between p-4">
-      <a href="#hero" class="text-2xl font-extrabold tracking-tight">Wettarena Süd</a>
+      <a href="#hero" class="text-2xl font-extrabold tracking-tight">Wettarena Süd</a>
       <ul class="hidden md:flex space-x-8 text-sm font-semibold">
         <li><a href="#features" class="hover:text-red-600">Features</a></li>
         <li><a href="#shops" class="hover:text-red-600">Shops</a></li>
-        <li><a href="#about" class="hover:text-red-600">Über uns</a></li>
+        <li><a href="#about" class="hover:text-red-600">Über&nbsp;uns</a></li>
         <li><a href="#contact" class="hover:text-red-600">Kontakt</a></li>
       </ul>
-      <!-- Burger -->
-      <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Menü öffnen">
+      <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </button>
     </nav>
-    <!-- Mobile menu  -->
     <div id="mobileMenu" class="md:hidden hidden bg-white/90 backdrop-blur-sm">
       <ul class="flex flex-col items-center space-y-6 py-6 text-base font-semibold">
-        <li><a href="#features" class="hover:text-red-600" onclick="toggleMenu()">Features</a></li>
-        <li><a href="#shops" class="hover:text-red-600" onclick="toggleMenu()">Shops</a></li>
-        <li><a href="#about" class="hover:text-red-600" onclick="toggleMenu()">Über uns</a></li>
-        <li><a href="#contact" class="hover:text-red-600" onclick="toggleMenu()">Kontakt</a></li>
+        <li><a href="#features" onclick="toggleMenu()">Features</a></li>
+        <li><a href="#shops" onclick="toggleMenu()">Shops</a></li>
+        <li><a href="#about" onclick="toggleMenu()">Über&nbsp;uns</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- ========== Hero ========== -->
+  <!-- ========== Hero ========== -->
   <section id="hero" class="h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image:url('images/hero.jpg');">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative z-10 text-center text-white p-8">
-      <h1 class="text-4xl md:text-6xl font-black leading-tight drop-shadow-lg">Klare Aussicht<br><span class="text-red-500">auf Gewinn</span></h1>
-      <p class="mt-6 mb-8 text-lg md:text-xl max-w-xl mx-auto">Sportwetten neu erleben – in Süddeutschland zuhause.</p>
-      <a href="#shops" class="inline-block px-10 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold transition">Unsere Standorte</a>
+      <h1 class="text-4xl md:text-6xl font-black leading-tight drop-shadow-lg">Klare Aussicht<br><span class="text-red-500">auf&nbsp;Gewinn</span></h1>
+      <p class="mt-6 mb-8 text-lg md:text-xl max-w-xl mx-auto">Sportwetten neu&nbsp;erleben – in&nbsp;Süddeutschland&nbsp;zuhause.</p>
+      <a href="#shops" class="inline-block px-10 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold transition">Unsere&nbsp;Standorte</a>
     </div>
   </section>
 
-  <!-- ========== Features ========== -->
+  <!-- ========== Features ========== -->
   <section id="features" class="py-24 bg-gray-100">
     <div class="container mx-auto text-center mb-16 px-6">
-      <h2 class="text-4xl font-extrabold mb-4">Warum Wettarena?</h2>
-      <p class="max-w-2xl mx-auto">Innovatives Design, exklusive Ausstattung und modernste Technik – wir setzen Maßstäbe im stationären Sportwetten‑Erlebnis.</p>
+      <h2 class="text-4xl font-extrabold mb-4">Warum&nbsp;Wettarena?</h2>
+      <p class="max-w-2xl mx-auto">Innovatives&nbsp;Design, exklusive&nbsp;Ausstattung und modernste&nbsp;Technik – wir setzen Maßstäbe im&nbsp;stationären Sportwetten‑Erlebnis.</p>
     </div>
     <div class="container mx-auto grid gap-10 md:grid-cols-3 px-6">
-      <!-- Feature 1 -->
       <div class="p-10 bg-white rounded-2xl shadow-xl text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" class="w-14 h-14 mx-auto mb-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25l3.094 6.26 6.906 1-5 4.867 1.18 6.873L12 17.77l-6.18 3.48 1.18-6.873-5-4.867 6.906-1L12 2.25z" />
-        </svg>
-        <h3 class="text-xl font-bold mb-2">Innovatives Design</h3>
-        <p>Atmosphäre, die begeistert – vom Eingang bis zur Lounge.</p>
+        <h3 class="text-xl font-bold mb-2">Innovatives&nbsp;Design</h3>
+        <p>Atmosphäre, die begeistert – vom&nbsp;Eingang bis zur Lounge.</p>
       </div>
-      <!-- Feature 2 -->
       <div class="p-10 bg-white rounded-2xl shadow-xl text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" class="w-14 h-14 mx-auto mb-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 5.625v6.75l3.375 3.375" />
-        </svg>
-        <h3 class="text-xl font-bold mb-2">Exklusive Ausstattung</h3>
-        <p>Premium‑Möbel und hochauflösende Screens für maximales Erlebnis.</p>
+        <h3 class="text-xl font-bold mb-2">Exklusive&nbsp;Ausstattung</h3>
+        <p>Premium‑Möbel und hochauflösende&nbsp;Screens für maximales&nbsp;Erlebnis.</p>
       </div>
-      <!-- Feature 3 -->
       <div class="p-10 bg-white rounded-2xl shadow-xl text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" class="w-14 h-14 mx-auto mb-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6.375 3.75h11.25M3.75 9.75h16.5m-13.5 6h10.5M9 3.75V2.25m6 1.5V2.25m-6 18v-1.5m6 1.5v-1.5" />
-        </svg>
-        <h3 class="text-xl font-bold mb-2">Modernste Technik</h3>
-        <p>Schnelle Terminals, Live‑Wetten & Echtzeit‑Daten ohne Verzögerung.</p>
+        <h3 class="text-xl font-bold mb-2">Modernste&nbsp;Technik</h3>
+        <p>Schnelle Terminals, Live‑Wetten &amp;&nbsp;Echtzeit‑Daten ohne&nbsp;Verzögerung.</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== Shops / Locations ========== -->
+  <!-- ========== Shops ========== -->
   <section id="shops" class="py-24">
     <div class="container mx-auto text-center mb-16 px-6">
-      <h2 class="text-4xl font-extrabold mb-4">Unsere Shops</h2>
-      <p class="max-w-2xl mx-auto">Besuchen Sie uns in den modernsten Wettfilialen Süddeutschlands.</p>
+      <h2 class="text-4xl font-extrabold mb-4">Unsere&nbsp;Shops</h2>
+      <p class="max-w-2xl mx-auto">Besuchen&nbsp;Sie uns in den modernsten Wettfilialen&nbsp;Süddeutschlands.</p>
     </div>
     <div class="container mx-auto grid gap-10 md:grid-cols-3 px-6">
-      <!-- Shop Card Template -->
       <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
-        <img src="images/shop1.jpg" alt="Shop München" class="h-48 w-full object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">München – Leopoldstraße</h3>
-          <p class="text-sm">Leopoldstraße 123<br>80804 München</p>
-        </div>
+        <img src="images/shop1.jpg" alt="Shop&nbsp;München" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6"><h3 class="text-xl font-bold">München&nbsp;– Leopoldstraße</h3><p class="text-sm">Leopoldstraße&nbsp;123<br>80804&nbsp;München</p></div>
       </div>
       <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
-        <img src="images/shop2.jpg" alt="Shop Nürnberg" class="h-48 w-full object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Nürnberg – Innenstadt</h3>
-          <p class="text-sm">Königstraße 45<br>90402 Nürnberg</p>
-        </div>
+        <img src="images/shop2.jpg" alt="Shop&nbsp;Nürnberg" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6"><h3 class="text-xl font-bold">Nürnberg&nbsp;– Innenstadt</h3><p class="text-sm">Königstraße&nbsp;45<br>90402&nbsp;Nürnberg</p></div>
       </div>
       <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
-        <img src="images/shop3.jpg" alt="Shop Stuttgart" class="h-48 w-full object-cover" />
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Stuttgart – Königstraße</h3>
-          <p class="text-sm">Königstraße 26<br>70173 Stuttgart</p>
-        </div>
+        <img src="images/shop3.jpg" alt="Shop&nbsp;Stuttgart" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6"><h3 class="text-xl font-bold">Stuttgart&nbsp;– Königstraße</h3><p class="text-sm">Königstraße&nbsp;26<br>70173&nbsp;Stuttgart</p></div>
       </div>
+    </div>
+    <div class="container mx-auto text-center mt-12 px-6">
+      <a href="shops.html" class="inline-block px-10 py-4 bg-red-600 hover:bg-red-700 rounded-full text-lg font-semibold text-white transition">Alle&nbsp;Shops&nbsp;ansehen</a>
     </div>
   </section>
 
-  <!-- ========== About / Timeline ========== -->
+  <!-- ========== About ========== -->
   <section id="about" class="py-24 bg-gray-100">
     <div class="container mx-auto text-center mb-16 px-6">
-      <h2 class="text-4xl font-extrabold mb-4">Über uns</h2>
-      <p class="max-w-2xl mx-auto">Seit über 15 Jahren steht Wettarena Süd für Leidenschaft, Innovation und Verantwortung im Sportwetten‑Bereich.</p>
+      <h2 class="text-4xl font-extrabold mb-4">Über&nbsp;uns</h2>
+      <p class="max-w-2xl mx-auto">Seit&nbsp;15&nbsp;Jahren steht Wettarena&nbsp;Süd für Leidenschaft, Innovation und Verantwortung im&nbsp;Sportwetten‑Bereich.</p>
     </div>
     <div class="container mx-auto max-w-3xl px-6">
       <ol class="relative border-l border-gray-300">
         <li class="mb-10 ml-6">
           <span class="absolute -left-3 top-2 w-6 h-6 rounded-full bg-red-600"></span>
-          <h3 class="font-semibold">2010 – Gründung</h3>
-          <p class="text-sm text-gray-600">Start der ersten Filiale in München.</p>
+          <h3 class="font-semibold">2010&nbsp;– Gründung</h3>
+          <p class="text-sm text-gray-600">Start der ersten Filiale in&nbsp;München.</p>
         </li>
         <li class="mb-10 ml-6">
           <span class="absolute -left-3 top-2 w-6 h-6 rounded-full bg-red-600"></span>
-          <h3 class="font-semibold">2015 – Expansion</h3>
-          <p class="text-sm text-gray-600">Eröffnung von fünf weiteren Standorten in Bayern und Baden‑Württemberg.</p>
+          <h3 class="font-semibold">2015&nbsp;– Expansion</h3>
+          <p class="text-sm text-gray-600">Fünf weitere Standorte in&nbsp;Bayern und Baden‑Württemberg.</p>
         </li>
         <li class="ml-6">
           <span class="absolute -left-3 top-2 w-6 h-6 rounded-full bg-red-600"></span>
-          <h3 class="font-semibold">2024 – Relaunch</h3>
-          <p class="text-sm text-gray-600">Einführung des neuen Store‑Designs und des digitalen Kundenportals.</p>
+          <h3 class="font-semibold">2024&nbsp;– Relaunch</h3>
+          <p class="text-sm text-gray-600">Neues Store‑Design &amp; digitales Kundenportal.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- ========== Contact ========== -->
+  <!-- ========== Contact ========== -->
   <section id="contact" class="py-24">
     <div class="container mx-auto max-w-4xl px-6">
       <h2 class="text-4xl font-extrabold text-center mb-12">Kontakt</h2>
       <div class="grid gap-10 md:grid-cols-2">
-        <!-- Contact Details -->
         <div>
-          <h3 class="text-xl font-bold mb-3">Wettarena Süd GmbH</h3>
-          <p>Leopoldstraße 123<br>80804 München</p>
-          <p class="mt-4"><strong>Telefon:</strong> +49 89 1234567</p>
+          <h3 class="text-xl font-bold mb-3">Wettarena&nbsp;Süd GmbH</h3>
+          <p>Leopoldstraße&nbsp;123<br>80804&nbsp;München</p>
+          <p class="mt-4"><strong>Telefon:</strong> +49&nbsp;89&nbsp;1234567</p>
           <p><strong>E‑Mail:</strong> <a href="mailto:info@wettarena-sued.de" class="text-red-600 hover:underline">info@wettarena-sued.de</a></p>
         </div>
-        <!-- Contact Form -->
         <form class="space-y-4" onsubmit="event.preventDefault(); alert('Danke für Ihre Nachricht!'); this.reset();">
-          <input type="text" placeholder="Ihr Name" class="w-full p-3 border rounded-xl focus:border-red-500 focus:ring-1 focus:ring-red-500" required />
-          <input type="email" placeholder="E‑Mail" class="w-full p-3 border rounded-xl focus:border-red-500 focus:ring-1 focus:ring-red-500" required />
-          <textarea placeholder="Nachricht" class="w-full p-3 border rounded-xl h-32 focus:border-red-500 focus:ring-1 focus:ring-red-500" required></textarea>
+          <input type="text" placeholder="Ihr&nbsp;Name" class="w-full p-3 border rounded-xl" required />
+          <input type="email" placeholder="E‑Mail" class="w-full p-3 border rounded-xl" required />
+          <textarea placeholder="Nachricht" class="w-full p-3 border rounded-xl h-32" required></textarea>
           <button type="submit" class="w-full px-8 py-3 bg-red-600 hover:bg-red-700 rounded-full text-white font-semibold transition">Absenden</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ========== Footer ========== -->
+  <!-- ========== Footer ========== -->
   <footer class="py-8 bg-gray-900 text-gray-400 text-center text-sm">
-    <p>© 2025 Wettarena Süd GmbH – Alle Rechte vorbehalten.</p>
+    <p>©&nbsp;2025 Wettarena&nbsp;Süd GmbH – Alle Rechte vorbehalten.</p>
   </footer>
 
-  <!-- = = = Scripts = = = -->
+  <!-- ========== Scripts ========== -->
   <script>
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
+    function toggleMenu() {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', (!expanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    }
     menuBtn.addEventListener('click', toggleMenu);
   </script>
 </body>
