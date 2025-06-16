@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – Wettarena Süd GmbH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#d91921',
+            surface: '#111111'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-black text-white font-sans leading-relaxed">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="images/logo.svg" alt="Wettarena Süd Logo" class="h-8 w-auto" />
+      </a>
+      <ul class="hidden md:flex space-x-8 text-sm font-semibold">
+        <li><a href="/#features" class="hover:text-primary">Features</a></li>
+        <li><a href="/#shops" class="hover:text-primary">Alle&nbsp;Shops</a></li>
+        <li><a href="/#about" class="hover:text-primary">Über&nbsp;uns</a></li>
+        <li><a href="/#contact" class="hover:text-primary">Kontakt</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-black/90 backdrop-blur-sm">
+      <ul class="flex flex-col items-center space-y-6 py-6 text-base font-semibold">
+        <li><a href="/#features" onclick="toggleMenu()">Features</a></li>
+        <li><a href="/#shops" onclick="toggleMenu()">Alle&nbsp;Shops</a></li>
+        <li><a href="/#about" onclick="toggleMenu()">Über&nbsp;uns</a></li>
+        <li><a href="/#contact" onclick="toggleMenu()">Kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Impressum -->
+  <main class="pt-32 px-6 pb-16 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-primary">Impressum</h1>
+
+    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+    <p class="mt-2">
+      Wettarena Süd GmbH<br>
+      Äußere Bayreuther Straße 55<br>
+      90409 Nürnberg<br>
+      Deutschland
+    </p>
+
+    <p class="mt-4"><strong>Vertreten durch:</strong> Max Mustermann (Geschäftsführer)</p>
+
+    <p class="mt-4"><strong>Kontakt:</strong><br>
+      Telefon: +49 911 38431675<br>
+      E-Mail: <a href="mailto:office@wettarena-sued.de" class="text-primary hover:underline">office@wettarena-sued.de</a>
+    </p>
+
+    <p class="mt-4"><strong>Registereintrag:</strong><br>
+      Eintragung im Handelsregister.<br>
+      Registergericht: Amtsgericht Würzburg<br>
+      Registernummer: HRB 17346
+    </p>
+
+    <p class="mt-4"><strong>Umsatzsteuer-ID:</strong><br>
+      Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+      DE368241644
+    </p>
+
+    <p class="mt-4"><strong>Haftung für Inhalte:</strong><br>
+      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+    </p>
+
+    <p class="mt-4"><strong>Haftung für Links:</strong><br>
+      Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte übernehmen wir keine Gewähr.
+    </p>
+
+    <p class="mt-4"><strong>Urheberrecht:</strong><br>
+      Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+    </p>
+
+    <p class="mt-6">Stand: Juni 2025</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-black text-gray-500 text-center text-sm space-x-4">
+    <p class="mb-2">© 2025 Wettarena Süd GmbH – Alle Rechte vorbehalten.</p>
+    <a href="/impressum.html" class="hover:underline">Impressum</a>
+    <a href="/datenschutz.html" class="hover:underline">Datenschutz</a>
+    <a href="/" class="hover:underline">Zur Startseite</a>
+  </footer>
+
+  <!-- Menü JS -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', (!expanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    }
+    menuBtn?.addEventListener('click', toggleMenu);
+  </script>
+</body>
+</html>

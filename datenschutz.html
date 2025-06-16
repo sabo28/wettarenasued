@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Wettarena Süd GmbH</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#d91921',
+            surface: '#111111'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-black text-white font-sans leading-relaxed">
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur z-50 shadow-sm">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="images/logo.svg" alt="Wettarena Süd Logo" class="h-8 w-auto" />
+      </a>
+      <ul class="hidden md:flex space-x-8 text-sm font-semibold">
+        <li><a href="/#features" class="hover:text-primary">Features</a></li>
+        <li><a href="/#shops" class="hover:text-primary">Alle&nbsp;Shops</a></li>
+        <li><a href="/#about" class="hover:text-primary">Über&nbsp;uns</a></li>
+        <li><a href="/#contact" class="hover:text-primary">Kontakt</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden focus:outline-none" aria-label="Menü öffnen" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden bg-black/90 backdrop-blur-sm">
+      <ul class="flex flex-col items-center space-y-6 py-6 text-base font-semibold">
+        <li><a href="/#features" onclick="toggleMenu()">Features</a></li>
+        <li><a href="/#shops" onclick="toggleMenu()">Alle&nbsp;Shops</a></li>
+        <li><a href="/#about" onclick="toggleMenu()">Über&nbsp;uns</a></li>
+        <li><a href="/#contact" onclick="toggleMenu()">Kontakt</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Datenschutz -->
+  <main class="pt-32 px-6 pb-16 max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-primary">Datenschutzerklärung</h1>
+
+    <p class="mb-4">Der Schutz Ihrer persönlichen Daten ist uns sehr wichtig. Nachfolgend informieren wir Sie über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten auf unserer Website gemäß Art. 13 DSGVO.</p>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">1. Verantwortliche Stelle</h2>
+    <p>
+      Wettarena Süd GmbH<br>
+      Äußere Bayreuther Straße 55<br>
+      90409 Nürnberg<br>
+      E-Mail: <a href="mailto:office@wettarena-sued.de" class="text-primary hover:underline">office@wettarena-sued.de</a>
+    </p>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">2. Erhebung und Speicherung personenbezogener Daten</h2>
+    <p>Beim Besuch unserer Website erheben wir folgende Daten, die technisch erforderlich sind (Server-Logfiles):</p>
+    <ul class="list-disc ml-6">
+      <li>IP-Adresse</li>
+      <li>Datum und Uhrzeit der Anfrage</li>
+      <li>Browsertyp und Browserversion</li>
+      <li>Verwendetes Betriebssystem</li>
+      <li>Referrer URL</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">3. Kontaktformular</h2>
+    <p>Wenn Sie uns per Formular kontaktieren, speichern wir Ihre Angaben zwecks Bearbeitung der Anfrage. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">4. Cookies</h2>
+    <p>Unsere Website verwendet Cookies, um die Nutzererfahrung zu verbessern. Die Speicherung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Sie können dem jederzeit widersprechen.</p>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">5. Ihre Rechte</h2>
+    <p>Sie haben jederzeit das Recht auf:</p>
+    <ul class="list-disc ml-6">
+      <li>Auskunft (Art. 15 DSGVO)</li>
+      <li>Berichtigung (Art. 16 DSGVO)</li>
+      <li>Löschung (Art. 17 DSGVO)</li>
+      <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+    </ul>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">6. Beschwerderecht bei der Aufsichtsbehörde</h2>
+    <p>Sie haben das Recht, sich bei einer Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.</p>
+
+    <h2 class="text-xl font-semibold text-primary mt-6 mb-2">7. Sicherheit</h2>
+    <p>Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten gegen Verlust oder unberechtigten Zugriff zu schützen.</p>
+
+    <p class="mt-6">Stand: Juni 2025</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-black text-gray-500 text-center text-sm space-x-4">
+    <p class="mb-2">© 2025 Wettarena Süd GmbH – Alle Rechte vorbehalten.</p>
+    <a href="/impressum.html" class="hover:underline">Impressum</a>
+    <a href="/datenschutz.html" class="hover:underline">Datenschutz</a>
+    <a href="/" class="hover:underline">Zur Startseite</a>
+  </footer>
+
+  <!-- JS für Menü -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMenu() {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', (!expanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    }
+    menuBtn?.addEventListener('click', toggleMenu);
+  </script>
+</body>
+</html>
